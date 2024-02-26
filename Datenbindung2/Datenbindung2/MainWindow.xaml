@@ -1,0 +1,35 @@
+﻿<Window x:Class="Datenbindung2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Datenbindung2"
+        mc:Ignorable="d" FontSize="20"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+    <TextBlock Text="{Binding Mitarbeiter[0].Name[0]}" Margin="5"/>
+    <ListBox ItemsSource="{Binding Mitarbeiter}" Margin="5" Grid.IsSharedSizeScope="True">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="Auto" SharedSizeGroup="A"/>
+              <ColumnDefinition Width="Auto" SharedSizeGroup="B"/>
+              <ColumnDefinition Width="Auto" SharedSizeGroup="C"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding Name}"/>
+            <TextBlock Text="{Binding Wohnort}" Grid.Column="1" Margin="10,0"/>
+            <TextBlock Name="TBAlter" Text="{Binding Alter}" Grid.Column="2"/>
+          </Grid>
+          <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding IstErfahren}" Value="True">
+              <Setter TargetName="TBAlter" Property="FontWeight" Value="Bold"/>
+              <Setter TargetName="TBAlter"  Property="Foreground" Value="Green" />
+              <Setter TargetName="TBAlter" Property="Background" Value="Lime"/>
+            </DataTrigger>
+          </DataTemplate.Triggers>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+  </StackPanel>
+</Window>

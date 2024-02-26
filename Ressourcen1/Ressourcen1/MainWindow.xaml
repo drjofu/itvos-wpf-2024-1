@@ -1,0 +1,29 @@
+﻿<Window x:Class="Ressourcen1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ressourcen1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+  <Window.Resources>
+      <!--<SolidColorBrush x:Key="Füllung1" Color="Blue"/>-->
+  </Window.Resources>
+
+  <Grid Background="{StaticResource Füllung3}">
+    <Ellipse Fill="{DynamicResource Füllung1}" HorizontalAlignment="Left" Height="100" Margin="143,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+    <Ellipse HorizontalAlignment="Center" Height="100" Margin="0,107,0,0" Stroke="Black" VerticalAlignment="Top" Width="279" Fill="{DynamicResource Füllung1}"/>
+    <Ellipse Fill="{DynamicResource ResourceKey=Füllung1}" HorizontalAlignment="Left" Height="100" Margin="111,232,0,0" Stroke="Black" VerticalAlignment="Top" Width="100">
+    </Ellipse>
+    <Ellipse Fill="{DynamicResource Füllung3}" HorizontalAlignment="Left" Height="128" Margin="328,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="81">
+    </Ellipse>
+    <Ellipse HorizontalAlignment="Left" Height="100" Margin="587,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" Fill="{DynamicResource Füllung3}"/>
+    <Ellipse HorizontalAlignment="Left" Height="100" Margin="504,272,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" Fill="{DynamicResource Füllung2}"/>
+    <Ellipse HorizontalAlignment="Left" Height="100" Margin="687,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="100">
+      <Ellipse.Fill>
+        <StaticResource ResourceKey="Füllung1"/>
+      </Ellipse.Fill>
+    </Ellipse>
+
+  </Grid>
+</Window>
