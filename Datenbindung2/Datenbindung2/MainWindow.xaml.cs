@@ -22,5 +22,20 @@ namespace Datenbindung2
 
       this.DataContext = new Firma();
     }
+
+    private void AlterInkrementieren(object sender, RoutedEventArgs e)
+    {
+      var liste = ((Firma)DataContext).Mitarbeiter;
+      foreach (var mitarbeiter in liste)
+      {
+        mitarbeiter.Alter++;
+      }
+    }
+
+    private void MitarbeiterHinzufügen(object sender, RoutedEventArgs e)
+    {
+      var liste = ((Firma)DataContext).Mitarbeiter;
+      liste.Add(new() { Name = "der Neue", Wohnort = "hier", Alter = 20 });
+    }
   }
 }
