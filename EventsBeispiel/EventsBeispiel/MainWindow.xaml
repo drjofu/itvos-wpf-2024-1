@@ -1,0 +1,18 @@
+﻿<Window x:Class="EventsBeispiel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventsBeispiel"
+        mc:Ignorable="d"
+        PreviewMouseDown="PreviewMouseDownHandler"
+        MouseDown="MouseDownHandler"
+        Title="MainWindow" Height="450" Width="800">
+  <StackPanel   MouseDown="MouseDownHandler"      PreviewMouseDown="PreviewMouseDownHandler">
+    <Button Click="ButtonClick"    MouseDown="MouseDownHandler"     PreviewMouseDown="PreviewMouseDownHandler">
+      <StackPanel Orientation="Horizontal"   MouseDown="MouseDownHandler"      PreviewMouseDown="PreviewMouseDownHandler">
+        <Ellipse Width="50" Height="50" Fill="Red"   MouseDown="MouseDownHandler"      PreviewMouseDown="PreviewMouseDownHandler"/>
+      </StackPanel>
+    </Button>
+  </StackPanel>
+</Window>
